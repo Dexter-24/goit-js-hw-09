@@ -27,7 +27,7 @@ form.addEventListener('input', (event) => {
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    if (!formData.email.trim || !formData.message) {
+    if (!formData.email.trim() || !formData.message.trim()) {
         alert('All fields should be filled');
         return;
     }
@@ -50,12 +50,12 @@ const style = document.createElement('style');
                 width: 408px;
             }
             label {
-            font-family: "Montserrat", sans-serif;
-font-weight: 400;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: 0.04em;
-color: #2e2f42;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.04em;
+                color: #2e2f42;
                 display: flex;
                 flex-direction: column;
             }
